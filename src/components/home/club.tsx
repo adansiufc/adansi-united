@@ -49,6 +49,7 @@ const Club = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {cards.map((item, index) => (
             <Card
+              key={item.title}
               className={cn(
                 "bg-none rounded-none shadow-xl relative border-none transition-transform ease-out duration-500",
                 index % 2 === 0 ? "bg-[#1cba18cc]" : "bg-[#F3BC63]"
