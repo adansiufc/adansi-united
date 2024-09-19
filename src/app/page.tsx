@@ -5,6 +5,7 @@ import Hero from "@/components/home/hero";
 import NewProduct from "@/components/home/new-products";
 import Pillars from "@/components/home/pillars";
 import Sponsors from "@/components/home/sponsors";
+import Staff from "@/components/home/staff";
 import Story from "@/components/home/story";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <Dreams />
       <Club />
       <Gallery />
+      <Staff />
       <Sponsors />
     </main>
   );

@@ -9,6 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import WidthConstraint from "./ui/width-constraint";
 import { NAV_ITEMS, NAV_LINKS } from "@/lib/constants";
 import Image from "next/image";
+import { BiX } from "react-icons/bi";
 
 const Menu = ({ check }: { check: boolean }) => {
   return (
@@ -94,7 +95,7 @@ const Header = () => {
         check && "h-screen"
       )}
     >
-      <WidthConstraint className="flex w-full items-center gap-4 justify-between">
+      <WidthConstraint className="flex w-full items-center uppercase gap-4 justify-between">
         <Link href={"#"}>
           <Image alt="logo" src="/assets/logo.svg" width={60} height={60} />
         </Link>
@@ -104,7 +105,7 @@ const Header = () => {
               <Link
                 key={index}
                 href={link.path}
-                className={`font-bold ${
+                className={`${
                   scrollPosition > 50 || check ? "text-black" : "text-white"
                 }`}
               >
@@ -113,21 +114,27 @@ const Header = () => {
             );
           })}
         </nav>
-        <div className="hidden lg:flex font-semibold items-center gap-5 h-full">
+        <div className="font-semibold items-center gap-5 h-full">
           <Button
             variant="link"
             onClick={() => setCheck(!check)}
-            className={`font-bold ${
+            className={`uppercase flex gap-1 font-[400] ${
               scrollPosition > 50 || check ? "text-black" : "text-white"
             }`}
           >
-            <span> Menu </span>
-            <HiOutlineMenuAlt3
-              size={30}
-              className={`flex lg:hidden ${
-                scrollPosition > 50 || check ? "text-black" : "text-white"
-              }`}
-            />
+            {!check ? (
+              <>
+                <span> Menu </span>
+                <HiOutlineMenuAlt3
+                  size={20}
+                  className={`${
+                    scrollPosition > 50 || check ? "text-black" : "text-white"
+                  }`}
+                />
+              </>
+            ) : (
+              <BiX size={30} />
+            )}
           </Button>
         </div>
       </WidthConstraint>

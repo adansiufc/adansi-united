@@ -46,11 +46,11 @@ export default function Hero() {
       <WidthConstraint className="w-full text-white text-center z-10 absolute  ">
         <div className="flex flex-col items-center justify-center gap-10">
           <Image alt="logo" src="/assets/logo.svg" width={150} height={150} />
-          <h1 className="text-7xl font-semibold">
+          <h1 className="text-5xl leading-[1.2em] md:text-7xl font-semibold">
             ADANSI <br /> ACADEMY PROJECT
           </h1>
           <p>Coming Soon!</p>
-          <div className="flex gap-4 w-full items-center justify-center">
+          <div className="flex gap-4 w-full flex-wrap items-center justify-center">
             <Button variant="outline" className="w-[250px]  bg-white/10">
               Registration
             </Button>
