@@ -7,7 +7,19 @@ import { Circle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-const images = ["/assets/hero.png", "/assets/hero.png", "/assets/hero.png"];
+const images = [
+  {
+    name: "ACADEMY PROJECT",
+    image: "/assets/hero.png",
+    subtitle: "Coming Soon!",
+  },
+  {
+    name: "UNITED FC",
+    image: "/assets/hero2.png",
+    subtitle:
+      "Adansi United Football Club is dedicated to creating a platform where dreams meet reality. We are not just playing football, we are building futures, one goal at a time.",
+  },
+];
 
 export default function Hero() {
   const [currentImage, setCurrentImage] = useState(0);
@@ -26,7 +38,7 @@ export default function Hero() {
           (src, index) =>
             index === currentImage && (
               <motion.div
-                key={src}
+                key={src.image}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -34,7 +46,7 @@ export default function Hero() {
               >
                 <Image
                   alt="hero"
-                  src={src}
+                  src={src.image}
                   layout="fill"
                   objectFit="cover"
                   className="object-cover"
@@ -47,9 +59,9 @@ export default function Hero() {
         <div className="flex flex-col items-center justify-center gap-10">
           <Image alt="logo" src="/assets/logo.svg" width={150} height={150} />
           <h1 className="text-5xl leading-[1.2em] md:text-7xl font-semibold">
-            ADANSI <br /> ACADEMY PROJECT
+            ADANSI <br /> {images[currentImage].name}
           </h1>
-          <p>Coming Soon!</p>
+          <p className="max-w-[650px]"> {images[currentImage].subtitle}</p>
           <div className="flex gap-4 w-full flex-wrap items-center justify-center">
             <Button variant="outline" className="w-[250px]  bg-white/10">
               Registration

@@ -42,7 +42,7 @@ const Footer = () => {
             </div>
           </section>
           <section className=" space-y-4">
-            <div className="font-light flex flex-wrap gap-5 md:flex-col text-nowrap">
+            <div className="font-light flex justify-center md:justify-start flex-wrap gap-5 md:flex-col text-nowrap">
               <Link href="#">
                 <p>TEAM (ACADEMIES & CLUBS)</p>
               </Link>

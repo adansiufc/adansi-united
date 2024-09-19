@@ -6,7 +6,7 @@ import { Button } from "../ui/button";
 
 const Sponsors = () => {
   return (
-    <section className="py-20 lg:py-32">
+    <section id="sponsors" className="scroll-m-20 py-20 lg:py-32">
       <WidthConstraint className="max-w-[800px] space-y-10">
         <h2 className="text-3xl lg:text-4xl text-center uppercase text-[#276C25]">
           Sponsors & Partners

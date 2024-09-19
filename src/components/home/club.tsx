@@ -41,7 +41,7 @@ const Club = () => {
     },
   ];
   return (
-    <section className="py-20">
+    <section id="club" className="scroll-m-20 py-20">
       <WidthConstraint className="space-y-10">
         <h2 className="text-3xl lg:text-4xl uppercase text-[#276C25] text-center">
           Club

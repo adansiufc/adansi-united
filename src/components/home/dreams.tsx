@@ -15,16 +15,15 @@ const Dreams = () => {
             <p>GET INSPIRED</p>
           </div>
         </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {DREAMERS.map((item) => (
             <Image
               key={item}
               alt=""
               src={item}
-              width={200}
+              width={1000}
               className="w-full"
-              height={200}
+              height={1000}
             />
           ))}
         </div>

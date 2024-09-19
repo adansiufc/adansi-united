@@ -4,7 +4,7 @@ import WidthConstraint from "../ui/width-constraint";
 const Pillars = () => {
   const pillars = ["Donations", "Support", "Football"];
   return (
-    <section className="bg-[url('/assets/pillar.png')] min-h-[500px] lg:min-h-[600px] flex items-center justify-center bg-cover bg-center bg-no-repeat">
+    <section className="bg-[url('/assets/pillar.png')] bg-fixed min-h-[500px] lg:min-h-[600px] flex items-center justify-center bg-cover bg-center bg-no-repeat">
       <WidthConstraint className="w-full text-white text-center">
         <div className="space-y-10">
           <h2 className="text-3xl lg:text-4xl uppercase">Our Pillars</h2>

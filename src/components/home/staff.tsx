@@ -6,19 +6,19 @@ const Staff = () => {
   const staff = [
     {
       name: "John Doe",
-      image: "/assets/dreamer3.png",
+      image: "/assets/dreamer3.svg",
     },
     {
       name: "John Doe",
-      image: "/assets/dreamer4.png",
+      image: "/assets/dreamer4.svg",
     },
     {
       name: "John Doe",
-      image: "/assets/dreamer2.png",
+      image: "/assets/dreamer2.svg",
     },
   ];
   return (
-    <section className="py-20 lg:py-32 bg-[url('/assets/field.png')] lg:min-h-[900px] flex items-center justify-center bg-cover bg-center">
+    <section className="py-20 lg:py-32 bg-[url('/assets/field.png')] bg-fixed lg:min-h-[900px] flex items-center justify-center bg-cover bg-center">
       <WidthConstraint className="space-y-10 w-full">
         <h2 className="text-3xl lg:text-4xl text-center uppercase text-white">
           COACHING STAFF

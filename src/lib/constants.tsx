@@ -6,11 +6,11 @@ export const NAV_LINKS = [
 
 export const NAV_ITEMS = [
   { name: "Home", path: "#" },
-  { name: "Club", path: "#apartments" },
-  { name: "TEAM (ACADEMIES & CLUBS)", path: "/story" },
-  { name: "Uniform", path: "/story" },
-  { name: "Academy (Training)", path: "/story" },
-  { name: "Partners", path: "/story" },
+  { name: "Club", path: "#club" },
+  { name: "TEAM (ACADEMIES & CLUBS)", path: "#" },
+  { name: "Uniform", path: "#" },
+  { name: "Academy (Training)", path: "#" },
+  { name: "Partners", path: "#sponsors" },
 ];
 
 export const GALLERY = [
@@ -20,10 +20,10 @@ export const GALLERY = [
 ];
 
 export const DREAMERS = [
-  "/assets/dreamer1.png",
-  "/assets/dreamer2.png",
-  "/assets/dreamer3.png",
-  "/assets/dreamer4.png",
+  "/assets/dreamer1.svg",
+  "/assets/dreamer2.svg",
+  "/assets/dreamer3.svg",
+  "/assets/dreamer4.svg",
 ];
 
 export const SPONSORS = [
