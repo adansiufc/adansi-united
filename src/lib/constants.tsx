@@ -1,15 +1,15 @@
 export const NAV_LINKS = [
   { name: "About", path: "#" },
-  { name: "Find Us", path: "#apartments" },
-  { name: "Socials", path: "/story" },
+  { name: "Find Us", path: "#contact" },
+  // { name: "Socials", path: "/story" },
 ];
 
 export const NAV_ITEMS = [
   { name: "Home", path: "#" },
   { name: "Club", path: "#club" },
-  { name: "TEAM (ACADEMIES & CLUBS)", path: "#" },
+  { name: "TEAM", path: "#" },
   { name: "Uniform", path: "#" },
-  { name: "Academy (Training)", path: "#" },
+  { name: "Academy", path: "#" },
   { name: "Partners", path: "#sponsors" },
 ];
 
@@ -38,3 +38,6 @@ export const SPONSORS = [
   { name: "Find Us", path: "/assets/brands/8.svg" },
   { name: "Socials", path: "/assets/brands/9.svg" },
 ];
+
+export const EMAIL = "thuqpalmer@gmail.com";
+export const RECIPIENT_EMAIL = "thuqpalmer@gmail.com";

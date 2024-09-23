@@ -6,6 +6,8 @@ import Image from "next/image";
 import { Circle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
+import DonateButton from "../ui/donate-btn";
+import Link from "next/link";
 
 const images = [
   {
@@ -47,7 +49,7 @@ export default function Hero() {
                 <Image
                   alt="hero"
                   src={src.image}
-                  layout="fill"
+                  fill
                   objectFit="cover"
                   className="object-cover"
                 />
@@ -63,10 +65,10 @@ export default function Hero() {
           </h1>
           <p className="max-w-[650px]"> {images[currentImage].subtitle}</p>
           <div className="flex gap-4 w-full flex-wrap items-center justify-center">
-            <Button variant="outline" className="w-[250px]  bg-white/10">
-              Registration
+            <Button asChild variant="outline" className="w-[250px]  bg-white/10">
+              <Link href="#register">Registration</Link>
             </Button>
-            <Button className="w-[250px]">Donate Now</Button>
+            <DonateButton className="w-[250px]" />
           </div>
           <div className="flex gap-2">
             {images.map((_, index) => (

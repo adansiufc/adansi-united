@@ -6,20 +6,17 @@ const Story = () => {
   const content = [
     {
       title: "REAL TRAINING",
-      description: ` We train with the best methods that are used worldwide focusing on the
-                development and growth of a 360 degree Soccer Player: technical, tactical,
-                physical and psychological.`,
+      description: `At Adansi United, we use world-class methods to develop the complete footballer, focusing on technical, tactical, physical, and psychological growth. Our holistic approach ensures players are prepared to excel both locally and internationally.`,
       color: "#276C25",
     },
     {
       title: "TRUE SOCCER",
-      description: `We are the unique Soccer Club in San Antonio offering a year-round training program and we use the methodologies of the best Soccer
-Clubs in the world.`,
+      description: `We are one of the few clubs in Ghana offering year-round football programs, blending global best practices with African football talent. Our methods reflect those of the top football clubs worldwide, shaping future stars.`,
       color: "#212121",
     },
     {
       title: "IMPROVING LIVES",
-      description: `Our Soccer Players club san antonio is all about acquiring habits in excellence and leadership for their personal growth as people and as soccer players.`,
+      description: `Adansi United opens doors to professional and international opportunities through partnerships with top clubs and scouts. We develop not just players, but leaders, instilling values of excellence, discipline, and leadership for success on and off the field.`,
       color: "#393939",
     },
   ];

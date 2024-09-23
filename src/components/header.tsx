@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
@@ -10,46 +10,61 @@ import WidthConstraint from "./ui/width-constraint";
 import { NAV_ITEMS, NAV_LINKS } from "@/lib/constants";
 import Image from "next/image";
 import { BiX } from "react-icons/bi";
+import DonateButton from "./ui/donate-btn";
 
-const Menu = ({ check }: { check: boolean }) => {
+const Menu = ({
+  check,
+  setCheck,
+}: {
+  check: boolean;
+  setCheck: Dispatch<SetStateAction<boolean>>;
+}) => {
   return (
-    <WidthConstraint className="w-full h-full flex items-center justify-center">
-      <AnimatePresence>
-        {check && (
-          <motion.nav
-            key="nav"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:min-w-[500px] space-y-10"
-          >
-            <ul className="flex flex-col uppercase  py-4 text-center gap-6 text-black h-full">
-              {NAV_ITEMS.map((item, index) => {
-                return (
-                  <li
-                    key={item.name}
-                    className={cn(
-                      " pb-5 lg:text-xl",
-                      index === NAV_ITEMS.length - 1 ? "border-none " : "border-b"
-                    )}
-                  >
-                    <Link href={item.path} className="">
-                      {item.name}
-                    </Link>
-                  </li>
-                );
-              })}
-              <div className="flex gap-6 flex-col">
-                <Button variant="outline" className="font-[400] md:text-lg">
-                  Registration
-                </Button>
-                <Button className="font-[400]  md:text-lg">Donate Now</Button>
-              </div>
-            </ul>
-          </motion.nav>
-        )}
-      </AnimatePresence>
-    </WidthConstraint>
+    <motion.div
+      className=" h-full w-full"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <WidthConstraint className="w-full h-full flex items-center  justify-center">
+        <AnimatePresence>
+          {check && (
+            <motion.nav
+              key="nav"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="min-w-[95%] sm:min-w-[400px] md:min-w-[500px] -mt-10 space-y-10"
+            >
+              <ul className="flex flex-col uppercase  py-4 text-center gap-6 text-black h-full">
+                {NAV_ITEMS.map((item, index) => {
+                  return (
+                    <li
+                      key={item.name}
+                      onClick={() => setCheck(false)}
+                      className={cn(
+                        " pb-5 lg:text-xl",
+                        index === NAV_ITEMS.length - 1 ? "border-none " : "border-b"
+                      )}
+                    >
+                      <Link href={item.path} className="">
+                        {item.name}
+                      </Link>
+                    </li>
+                  );
+                })}
+                <div className="flex gap-6 flex-col">
+                  <Button asChild variant="outline" className="font-[400] md:text-lg">
+                    <Link href="#register">Registration</Link>
+                  </Button>
+                  <DonateButton className="font-[400] md:text-lg" />
+                </div>
+              </ul>
+            </motion.nav>
+          )}
+        </AnimatePresence>
+      </WidthConstraint>
+    </motion.div>
   );
 };
 
@@ -138,7 +153,7 @@ const Header = () => {
           </Button>
         </div>
       </WidthConstraint>
-      {check && <Menu check={check} />}
+      {check && <Menu check={check} setCheck={setCheck} />}
     </header>
   );
 };

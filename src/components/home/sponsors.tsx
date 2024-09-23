@@ -3,6 +3,8 @@ import WidthConstraint from "../ui/width-constraint";
 import Image from "next/image";
 import { SPONSORS } from "@/lib/constants";
 import { Button } from "../ui/button";
+import DonateButton from "../ui/donate-btn";
+import Link from "next/link";
 
 const Sponsors = () => {
   return (
@@ -24,10 +26,10 @@ const Sponsors = () => {
           ))}
         </div>
         <div className="flex gap-4 w-full py-20 flex-wrap items-center justify-center">
-          <Button variant="outline" className="w-[250px]  bg-white/10">
-            Registration
+          <Button asChild variant="outline" className="w-[250px]  bg-white/10">
+            <Link href="#register">Registration</Link>
           </Button>
-          <Button className="w-[250px]">Donate Now</Button>
+          <DonateButton className="w-[250px]" />
         </div>
       </WidthConstraint>
     </section>

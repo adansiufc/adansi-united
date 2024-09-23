@@ -44,10 +44,10 @@ const Footer = () => {
           <section className=" space-y-4">
             <div className="font-light flex justify-center md:justify-start flex-wrap gap-5 md:flex-col text-nowrap">
               <Link href="#">
-                <p>TEAM (ACADEMIES & CLUBS)</p>
+                <p>TEAM</p>
               </Link>
               <Link href="#">
-                <p>Academy (Training)</p>
+                <p>Academy</p>
               </Link>
             </div>
           </section>

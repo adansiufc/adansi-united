@@ -4,6 +4,7 @@ import Gallery from "@/components/home/gallery";
 import Hero from "@/components/home/hero";
 import NewProduct from "@/components/home/new-products";
 import Pillars from "@/components/home/pillars";
+import Register from "@/components/home/register";
 import Sponsors from "@/components/home/sponsors";
 import Staff from "@/components/home/staff";
 import Story from "@/components/home/story";
@@ -19,6 +20,7 @@ export default function Home() {
       <Club />
       <Gallery />
       <Staff />
+      <Register />
       <Sponsors />
     </main>
   );

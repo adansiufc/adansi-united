@@ -3,6 +3,7 @@ import WidthConstraint from "../ui/width-constraint";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { DREAMERS } from "@/lib/constants";
+import Link from "next/link";
 
 const Dreams = () => {
   return (
@@ -28,8 +29,12 @@ const Dreams = () => {
           ))}
         </div>
         <div className="justify-center lg:justify-start flex">
-          <Button variant="outline" className="w-[250px]  border-primary text-primary">
-            Registration
+          <Button
+            asChild
+            variant="outline"
+            className="w-[250px]  border-primary text-primary"
+          >
+            <Link href="#register">Registration</Link>
           </Button>
         </div>
       </WidthConstraint>
