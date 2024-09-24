@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Toaster } from "sonner";
+import { Provider } from "react-wrap-balancer";
 
 export const metadata: Metadata = {
   title: "Adansi United",
@@ -21,10 +22,12 @@ export default function RootLayout({
         <link rel="preload" href="/assets/hero2.png" as="image" />
       </header>
       <body className={`antialiased`}>
-        <Toaster richColors />
-        <Header />
-        {children}
-        <Footer />
+        <Provider>
+          <Toaster richColors />
+          <Header />
+          {children}
+          <Footer />
+        </Provider>
       </body>
     </html>
   );
