@@ -8,12 +8,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import DonateButton from "../ui/donate-btn";
 import Link from "next/link";
+import Balancer from "react-wrap-balancer";
 
 const images = [
   {
-    name: "ACADEMY PROJECT",
+    name: "Academy Sports Village",
     image: "/assets/hero.png",
-    subtitle: "Coming Soon!",
+    subtitle:
+      "Adansi Academy Sport Village is an innovative project set to revolutionize sports and sustainability in Africa, launching soon in Ghana, and shaping the future of African talent.",
   },
   {
     name: "UNITED FC",
@@ -60,10 +62,14 @@ export default function Hero() {
       <WidthConstraint className="w-full text-white text-center z-10 absolute  ">
         <div className="flex flex-col items-center justify-center gap-10">
           <Image alt="logo" src="/assets/logo.svg" width={150} height={150} />
-          <h1 className="text-5xl leading-[1.2em] md:text-7xl font-semibold">
-            ADANSI <br /> {images[currentImage].name}
+          <h1 className="text-4xl sm:text-5xl leading-[1.2em] md:text-7xl font-semibold uppercase max-w-[700px]">
+            <Balancer>
+              ADANSI {currentImage === 1 && <br />} {images[currentImage].name}
+            </Balancer>
           </h1>
-          <p className="max-w-[650px]"> {images[currentImage].subtitle}</p>
+          <p className="max-w-[650px]">
+            <Balancer>{images[currentImage].subtitle}</Balancer>
+          </p>
           <div className="flex gap-4 w-full flex-wrap items-center justify-center">
             <Button asChild variant="outline" className="w-[250px]  bg-white/10">
               <Link href="#register">Registration</Link>
