@@ -1,1 +1,1 @@
-`adansiunitedfc.com` - `@2024`
+`adansiunitedfc.com` - `@`
