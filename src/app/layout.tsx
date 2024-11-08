@@ -17,10 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <header>
+      <head>
         <link rel="preload" href="/assets/hero.png" as="image" />
         <link rel="preload" href="/assets/hero2.png" as="image" />
-      </header>
+      </head>
       <body className={`antialiased`}>
         <Provider>
           <Toaster richColors />
