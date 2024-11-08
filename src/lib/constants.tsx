@@ -14,9 +14,11 @@ export const NAV_ITEMS = [
 ];
 
 export const GALLERY = [
-  "/assets/gallery-1.png",
-  "/assets/gallery-2.png",
-  "/assets/gallery-3.png",
+  "/assets/gallery-4.png",
+  "/assets/gallery-5.png",
+  "/assets/gallery-6.png",
+  "/assets/gallery-7.png",
+  "/assets/gallery-8.png",
 ];
 
 export const DREAMERS = [
