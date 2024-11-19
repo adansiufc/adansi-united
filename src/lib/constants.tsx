@@ -19,6 +19,8 @@ export const GALLERY = [
   "/assets/gallery-6.png",
   "/assets/gallery-7.png",
   "/assets/gallery-8.png",
+  "/assets/gallery-9.png",
+  "/assets/gallery-10.png",
 ];
 
 export const DREAMERS = [

@@ -39,6 +39,7 @@ const Gallery = () => {
                       width={300}
                       height={300}
                       className="object-cover w-full"
+                      priority
                     />
                   </CardContent>
                 </Card>
