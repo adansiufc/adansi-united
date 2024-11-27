@@ -1,3 +1,1 @@
-`www.adansiunitedfc.com` - official
-
-finale
+`www.adansiunitedfc.com` - official site
