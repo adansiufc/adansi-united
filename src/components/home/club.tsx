@@ -8,36 +8,42 @@ const Club = () => {
   const cards = [
     {
       title: "OUR TEAMS",
-      description: "ADANSI SOCCER ACADEMY TEAMS U9 TO U19",
+      description:
+        "Explore the teams within the Adansi Academy, ranging from youth squads to our main team. Each team is dedicated to excellence and growth in their sport.",
       icon: "/assets/icons/people.svg",
       image: "/assets/gallery-1.png",
     },
     {
       title: "REGISTRATION",
-      description: "2024-2025 FORMS & INFOMATION",
-      icon: "/assets/icons/people.svg",
+      description:
+        "Become a part of the Adansi Academy community. Whether you're an athlete, coach, or supporter, there are numerous ways to join our journey.",
+      icon: "/assets/icons/register.svg",
     },
     {
       title: "LOCATIONS",
-      description: "TRAINING & GAME LOCATIONS",
-      icon: "/assets/icons/people.svg",
+      description:
+        "Introducing Adansi United Football Club, a vibrant and dynamic sports club located in the heart of Obuasi,Ghana.",
+      icon: "/assets/icons/location.svg",
       image: "/assets/gallery-2.png",
     },
     {
       title: "COACHING STAFF",
-      description: "ADANSI SOCCER ACADEMY CERTIFIED COACHES",
+      description:
+        "Our experienced coaches are committed to nurturing talent and fostering growth. Learn more about the professionals guiding our athletes.",
       icon: "/assets/icons/people.svg",
     },
     {
       title: "PROGRAMS",
-      description: "ADANSI SOCCER ACADEMY PROGRAMS",
-      icon: "/assets/icons/people.svg",
+      description:
+        "Discover the diverse programs we offer, designed to develop various aspects of our athletes' careers. From training sessions to educational workshops, we provide comprehensive support.",
+      icon: "/assets/icons/programs.svg",
       image: "/assets/gallery-3.png",
     },
     {
       title: "TRAINING SCHEDULE",
-      description: "SCHEDULE FOR 2024 - 2025 SEASON",
-      icon: "/assets/icons/people.svg",
+      description:
+        "Stay informed about our training schedule. Our structured sessions are designed to keep our athletes at their best.",
+      icon: "/assets/icons/train.svg",
     },
   ];
   return (
@@ -65,7 +71,12 @@ const Club = () => {
                 />
               )}
               <CardContent className="min-h-[300px] border p-10 flex items-center gap-2 text-white justify-center flex-col text-center aspect-square ">
-                <Image src={item.icon} width={40} height={40} alt={item.title} />
+                <Image
+                  src={item.icon}
+                  width={40}
+                  height={40}
+                  alt={item.title}
+                />
                 <h4 className="font-bold text-xl">{item.title}</h4>
                 <p className="max-w-[200px] text-sm">{item.description}</p>
               </CardContent>

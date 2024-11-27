@@ -14,8 +14,7 @@ const images = [
   {
     name: "Academy Sports Village",
     image: "/assets/hero.png",
-    subtitle:
-      "Adansi Academy Sport Village is an innovative project set to revolutionize sports and sustainability in Africa, launching soon in Ghana, and shaping the future of African talent.",
+    subtitle: "Coming Soon!",
   },
   {
     name: "UNITED FC",
@@ -71,7 +70,11 @@ export default function Hero() {
             <Balancer>{images[currentImage].subtitle}</Balancer>
           </p>
           <div className="flex gap-4 w-full flex-wrap items-center justify-center">
-            <Button asChild variant="outline" className="w-[250px]  bg-white/10">
+            <Button
+              asChild
+              variant="outline"
+              className="w-[250px]  bg-white/10"
+            >
               <Link href="#register">Registration</Link>
             </Button>
             <DonateButton className="w-[250px]" />

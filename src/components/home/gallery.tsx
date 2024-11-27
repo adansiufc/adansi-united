@@ -14,6 +14,10 @@ const Gallery = () => {
         <h2 className="text-3xl lg:text-4xl uppercase text-[#276C25]">
           OUR GALLERY
         </h2>
+        <p>
+          A collection of memorable moments from our training sessions, matches,
+          and community events.
+        </p>
         <Carousel
           opts={{
             align: "start",

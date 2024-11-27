@@ -1,7 +1,13 @@
 "use client";
 import React, { FormEvent, useState } from "react";
 import WidthConstraint from "../ui/width-constraint";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../ui/card";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
@@ -82,7 +88,9 @@ const Register = () => {
       await saveUserRegistration(slug, userData);
       await sendEmails(userData);
       setLoading(false);
-      toast.success("Registration successful! Check your email for confirmation.");
+      toast.success(
+        "Registration successful! Check your email for confirmation."
+      );
 
       // Clear form
       setFirstName("");
@@ -92,15 +100,24 @@ const Register = () => {
     } catch (error) {
       setLoading(false);
       console.error("Error registering user:", error);
-      toast.error("There was an error with your registration. Please try again.");
+      toast.error(
+        "There was an error with your registration. Please try again."
+      );
     }
   };
 
   return (
-    <section id="register" className="scroll-m-20 py-20 space-y-10 lg:py-32 bg-gray-100 ">
+    <section
+      id="register"
+      className="scroll-m-20 py-20 space-y-10 lg:py-32 bg-gray-100 "
+    >
       <h2 className="text-3xl lg:text-4xl text-center uppercase text-[#276C25]">
         Register
       </h2>
+      <p className="text-center">
+        Join the Adansi Academy Sports Village today! Fill out the registration
+        form to become a part of our thriving community.
+      </p>
       <WidthConstraint className="max-w-[800px] space-y-10 px-0">
         <div className="">
           <Card className="py-10 lg:p-10">
@@ -124,11 +141,17 @@ const Register = () => {
                 </fieldset>
                 <fieldset className="space-y-2">
                   <Label>Last Name</Label>
-                  <Input value={lastName} onChange={(e) => setLastName(e.target.value)} />
+                  <Input
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                  />
                 </fieldset>
                 <fieldset className="space-y-2 lg:col-span-2">
                   <Label>Email</Label>
-                  <Input value={email} onChange={(e) => setEmail(e.target.value)} />
+                  <Input
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
                 </fieldset>
                 <fieldset className="space-y-2 lg:col-span-2">
                   <Label>Phone Number</Label>
@@ -138,7 +161,11 @@ const Register = () => {
                   />
                 </fieldset>
                 <div className="pt-5 lg:col-span-2 flex justify-center">
-                  <Button className="w-[250px]" type="submit" disabled={loading}>
+                  <Button
+                    className="w-[250px]"
+                    type="submit"
+                    disabled={loading}
+                  >
                     {loading ? <Loader className="animate-spin" /> : "Submit"}
                   </Button>
                 </div>

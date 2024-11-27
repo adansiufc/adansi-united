@@ -34,6 +34,7 @@ export const SPONSORS = [
   { name: "Socials", path: "/assets/brands/10.svg" },
   { name: "About", path: "/assets/brands/1.svg" },
   { name: "Find Us", path: "/assets/brands/2.svg" },
+  { name: "Music", path: "/assets/brands/11.svg" },
   { name: "Socials", path: "/assets/brands/3.svg" },
   { name: "About", path: "/assets/brands/4.svg" },
   { name: "Find Us", path: "/assets/brands/5.svg" },
