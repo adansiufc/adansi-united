@@ -68,6 +68,8 @@ export const SPONSORS = [
   { name: "About", path: "/assets/brands/7.svg" },
   { name: "Find Us", path: "/assets/brands/8.svg" },
   { name: "Socials", path: "/assets/brands/9.svg" },
+  { name: "Dw3t33", path: "/assets/brands/12.svg" },
+  { name: "Hyper", path: "/assets/brands/13.svg" },
 ];
 
 export const EMAIL = "thuqpalmer@gmail.com";
