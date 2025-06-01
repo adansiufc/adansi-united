@@ -6,7 +6,7 @@ import NewProduct from "@/components/home/new-products";
 import Register from "@/components/home/register";
 import Sponsors from "@/components/home/sponsors";
 import Staff from "@/components/home/staff";
-import Story from "@/components/home/story";
+import Story from "@/components/home/story";import dynamic from 'next/dynamic';
 import ThankYouMessage from "@/components/thank-you-message";
 import Pillars from "@/components/home/pillars";
 
@@ -14,7 +14,8 @@ export default function Home() {
   return (
     <main className="overflow-x-clip relative"> {/* Added relative for absolute positioning of message */}
       <ThankYouMessage />
-      <Hero />
+      <Hero />const ThankYouMessage = dynamic(() => import('@/components/thank-you-message'), { ssr: false });
+
       <Story />
       <Pillars />
       <NewProduct />
