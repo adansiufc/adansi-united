@@ -1,5 +1,3 @@
-'use client';
-
 import Club from "@/components/home/club";
 import Dreams from "@/components/home/dreams";
 import Gallery from "@/components/home/gallery";
