@@ -17,7 +17,12 @@ export default function Home() {
   const searchParams = useSearchParams();
   const [showThankYou, setShowThankYou] = useState(false);
 
-  // Logic to check for donation_complete query parameter and show thank you message
+  useEffect(() => {
+    const donationComplete = searchParams.get('donation_complete');
+    if (donationComplete === 'true') {
+      setShowThankYou(true);
+    }
+  }, [searchParams]);
 
   return (
     <main className="overflow-x-clip relative"> {/* Added relative for absolute positioning of message */}
